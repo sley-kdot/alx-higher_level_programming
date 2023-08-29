@@ -3,7 +3,7 @@ def safe_print_integer(value):
     condition = isinstance(value, int)
     try:
         if condition:
-            print(value)
+            print("{:d}".format(value))
             return True
-    except:
+    except Exception:
         return False
