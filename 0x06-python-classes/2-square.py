@@ -1,10 +1,10 @@
 #!/usr/bin/python3
-"""Module that contain a Sqaure class"""
+"""Module that contain a Square class"""
 
 
 class Square:
     """ Blueprint that defines a Square class """
-    def __init__(self, size):
+    def __init__(self, size=0):
         """ Initialization of attribute
         Args:
             size (int): size of square
