@@ -58,9 +58,9 @@ class Rectangle:
             ValueError: if size is not >= 0
         """
         if type(value) is not int:
-            raise TypeError("width must be an integer")
+            raise TypeError("height must be an integer")
         if value < 0:
-            raise ValueError("width must be >= 0")
+            raise ValueError("height must be >= 0")
         else:
             self.__height = value
 
@@ -90,14 +90,14 @@ class Rectangle:
             return ""
         for i in range(self.__height):
             for j in range(self.__width):
-                result += Rectangle.print_symbol
+                result += str(self.print_symbol)
             result += "\n"
         return result[:-1]
 
     def __repr__(self):
         """representation of the rectangle to be able to recreate
         a new instance by using eval()"""
-        return f"Rectangle({self__width}, {self__height})"
+        return f"Rectangle({self.__width}, {self.__height})"
 
     def __del__(self):
         """prints a message when an instance if Rectangle is deleted"""
