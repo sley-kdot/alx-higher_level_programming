@@ -6,6 +6,9 @@
 #####
 #####
 
+>>> print_square(0)
+<BLANKLINE>
+
 # Test for size not being an integer
 >>> print_square("Le Meilleur")
 Traceback (most recent call last):
