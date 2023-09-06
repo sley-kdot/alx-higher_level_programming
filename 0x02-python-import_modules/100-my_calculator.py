@@ -8,13 +8,13 @@ if __name__ == "__main__":
     if size != 3:
         print("Usage: {} <a> <operator> <b>".format(argv[0]))
         exit(1)
-    elif argv[2] in operators:
+    elif argv[2] in operators[0]:
         result = add(int(argv[1]), int(argv[3]))
-    elif argv[2] in operators:
+    elif argv[2] in operators[1]:
         result = sub(int(argv[1]), int(argv[3]))
-    elif argv[2] in operators:
+    elif argv[2] in operators[2]:
         result = mul(int(argv[1]), int(argv[3]))
-    elif argv[2] in operators:
+    elif argv[2] in operators[3]:
         result = div(int(argv[1]), int(argv[3]))
     else:
         print("Unknown operator. Available operators: +, -, * and /")
