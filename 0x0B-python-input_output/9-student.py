@@ -1,9 +1,11 @@
 #!/usr/bin/python3
-"""module that contains a Student class"""
+"""
+module that contains a Student class
+"""
 
 
 class Student:
-    """a class Student that defines a student """
+    """a class Student that defines a student"""
 
     def __init__(self, first_name, last_name, age):
         """initialized class attributes
@@ -18,5 +20,7 @@ class Student:
         self.age = age
 
     def to_json(self):
-        """retrieves a dictionary representation of a Student instance"""
+        """
+        retrieves a dictionary representation of a Student instance
+        """
         return(self.__dict__)
