@@ -10,6 +10,10 @@ class Rectangle(Base):
         self.x = x
         self.y = y
 
+    def __str__(self):
+        return "[Rectangle] ({}) {:d}/{:d} - {:d}/{:d}".format(
+                self.id, self.x, self.y, self.width, self.height)
+
     @property
     def width(self):
         return self.__width
@@ -77,15 +81,28 @@ class Rectangle(Base):
 
     def update(self, *args):
         i = 0
-        for arg in args:
-            if i == 0:
-                self.id = args[i]
-            elif i == 1:
-                self.width = args[i]
-            elif i == 2:
-                self.height = args[i]
-            elif i == 3:
-                self.x = args[i]
-            elif i == 4:
-                self.y = args[i]
-            i += 1
+        if args:
+            for arg in args:
+                if i == 0:
+                    self.id = args[i]
+                elif i == 1:
+                    self.width = args[i]
+                elif i == 2:
+                    self.height = args[i]
+                elif i == 3:
+                    self.x = args[i]
+                elif i == 4:
+                    self.y = args[i]
+                i += 1
+        if kwargs:
+            for key, val in kwargs.items():
+                if key == 'id':
+                    self.id = val
+                elif key == 'width':
+                    self.width = val
+                elif key == 'height':
+                    self.height = val
+                elif key == 'x':
+                    self.x = val
+                elif key == 'y':
+                    self.y = val
