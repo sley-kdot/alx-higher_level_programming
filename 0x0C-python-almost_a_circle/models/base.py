@@ -32,7 +32,7 @@ class Base:
     @staticmethod
     def to_json_string(list_dictionaries):
         """a static method that returns the JSON string representation"""
-        if list_dictionaries is not None or list_dictionaries is not []:
+        if list_dictionaries is not None and list_dictionaries is not []:
             return json.dumps(list_dictionaries)
         else:
             return "[]"
@@ -48,3 +48,11 @@ class Base:
             new_list.append(obj.to_dictionary())
         with open(name, 'w', encoding="utf-8") as file:
             file.write(cls.to_json_string(new_list))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """Returns the list of the JSON string representation json_string"""
+        if json_string is None or json_string == "":
+            return "[]"
+        else:
+            return json.loads(json_string)
