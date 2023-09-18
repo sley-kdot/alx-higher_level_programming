@@ -42,18 +42,18 @@ class Base:
         """a classmethod that writes the JSON string representation"""
         name = cls.__name__ + ".json"
         new_list = []
-        if list_objs is None:
-            return "[]"
-        else:
-            for obj in list_objs:
-                new_list.append(obj.to_dictionary())
-            with open(name, 'w', encoding="utf-8") as file:
+        with open(name, 'w', encoding="utf-8") as file:
+            if list_objs is None:
+                file.write("[]")
+            else:
+                for obj in list_objs:
+                    new_list.append(obj.to_dictionary())
                 file.write(cls.to_json_string(new_list))
 
     @staticmethod
     def from_json_string(json_string):
         """Returns the list of the JSON string representation json_string"""
-        if json_string is None and json_string is []:
-            return "[]"
+        if json_string is None or json_string == []:
+            return []
         else:
             return json.loads(json_string)
