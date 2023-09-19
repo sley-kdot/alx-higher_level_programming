@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """module contains the Square class"""
-Rectangle = __import__('999999999le').Rectangle
+Rectangle = __import__('9-rectangle').Rectangle
 
 
 class Square(Rectangle):
