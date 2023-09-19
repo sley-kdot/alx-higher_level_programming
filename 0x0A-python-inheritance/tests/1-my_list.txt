@@ -1,6 +1,12 @@
 >>> MyList = __import__('1-my_list').MyList
 
 >>> my_list = MyList()
+>>> print(my_list)
+[]
+
+>>> my_list.print_sorted()
+[]
+
 >>> my_list.print_sorted()
 []
 
@@ -51,4 +57,3 @@ TypeError: '<' not supported between instances of 'int' and 'str'
 Traceback (most recent call last):
   ...
 TypeError: '<' not supported between instances of 'bool' and 'str'
-
