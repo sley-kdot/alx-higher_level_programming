@@ -1,2 +1,54 @@
 >>> MyList = __import__('1-my_list').MyList
+
 >>> my_list = MyList()
+>>> my_list.print_sorted()
+[]
+
+>>> my_list = MyList()
+>>> my_list.append(2)
+>>> my_list.append(4)
+>>> my_list.append(6)
+>>> my_list.append(8)
+>>> my_list.append(10)
+>>> my_list.print_sorted()
+[2, 4, 6, 8, 10]
+
+>>> my_list = MyList()
+>>> my_list.append(-1)
+>>> my_list.append(-4)
+>>> my_list.append(-2)
+>>> my_list.append(-3)
+>>> my_list.append(-5)
+>>> my_list.print_sorted()
+[-5, -4, -3, -2, -1]
+
+>>> my_list = MyList()
+>>> my_list.append("Nnamdi")
+>>> my_list.append("Kingsley")
+>>> my_list.append("Okonmah")
+>>> my_list.print_sorted()
+['Kingsley', 'Nnamdi', 'Okonmah']
+
+>>> my_list = MyList()
+>>> my_list.append("Nnamdi")
+>>> my_list.append(69)
+>>> my_list.append(True)
+>>> my_list.append(["Python", "C"])
+>>> my_list.append(("Football", "Basketball"))
+>>> my_list.append({"Married": "No"})
+>>> my_list.print_sorted()
+Traceback (most recent call last):
+  ...
+TypeError: '<' not supported between instances of 'int' and 'str'
+
+>>> my_list = MyList()
+>>> my_list.append("Nnamdi")
+>>> my_list.append(True)
+>>> my_list.append(["Python", "C"])
+>>> my_list.append(("Football", "Basketball"))
+>>> my_list.append({"Married": "No"})
+>>> my_list.print_sorted()
+Traceback (most recent call last):
+  ...
+TypeError: '<' not supported between instances of 'bool' and 'str'
+
