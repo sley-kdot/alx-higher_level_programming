@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """module contains the Square class"""
-Rectangle = __import__('8-rectangle').Rectangle
+Rectangle = __import__('999999999le').Rectangle
 
 
 class Square(Rectangle):
@@ -11,9 +11,9 @@ class Square(Rectangle):
         Args:
             size (int): size of a square
         """
-        super().__init__(size, size)
         super().integer_validator("size", size)
         self.__size = size
+        super().__init__(width=size, height=size)
 
     def area(self):
         """calculates the area of a square
