@@ -1,4 +1,4 @@
->>> BaseGeometry = __import__('7base-geometry').BaseGeometry
+>>> BaseGeometry = __import__('7-base-geometry').BaseGeometry
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("age", 1)
 
