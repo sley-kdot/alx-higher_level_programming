@@ -62,7 +62,7 @@ class Base:
     def create(cls, **dictionary):
         """returns an instance with all attributes already set"""
         if cls.__name__ == "Rectangle":
-            dummy = cls(6,9)
+            dummy = cls(6, 9)
         else:
             dummy = cls(6)
         dummy.update(**dictionary)
