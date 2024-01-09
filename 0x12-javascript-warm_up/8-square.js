@@ -2,7 +2,7 @@
 const args = process.argv;
 
 const number = parseInt(args[2]);
-let str = ''
+let str = '';
 for (let i = 1; i <= number; i++) {
   for (let j = 1; j <= number; j++) {
     str += 'X';
@@ -11,4 +11,4 @@ for (let i = 1; i <= number; i++) {
     str += '\n';
   }
 }
-console.log(str)
+console.log(str);
