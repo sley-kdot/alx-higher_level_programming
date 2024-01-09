@@ -9,10 +9,13 @@ if (size <= 3) {
   console.log(0);
 } else {
   for (let i = 2; i < size; i++) {
-    if (parseInt(args[i]) > firstLargest) {
-      firstLargest = parseInt(args[i]);
-    } else if ((parseInt(args[i]) > secondLargest) && (secondLargest !== firstLargest)) {
-      secondLargest = parseInt(args[i]);
+    const currentNum = parseInt(args[i]);
+
+    if (currentNum > firstLargest) {
+      secondLargest = firstLargest;
+      firstLargest = currentNum;
+    } else if ((currentNum > secondLargest) && (currentNum < firstLargest)) {
+      secondLargest = currentNum;
     }
   }
   console.log(secondLargest);
