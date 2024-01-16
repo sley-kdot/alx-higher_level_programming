@@ -17,5 +17,7 @@ if __name__ == "__main__":
     session = Session()
     name_to_search = sys.argv[4]
     states = session.query(State).filter_by(name=name_to_search).first()
-
-    print(states)
+    if not states:
+        print("Noting found")
+    else:
+        print(states.id)
