@@ -7,8 +7,6 @@ import urllib.request
 import sys
 
 if __name__ == "__main__":
-    user_agent = {'user-Agent': user}
     url = sys.argv[1]
-    req = urllib.request.Request(url)
-    with urllib.request.urlopen(req) as response:
-        print(response.header)
+    with urllib.request.urlopen(url) as response:
+        print(response.headers["X-Request-Id"])
