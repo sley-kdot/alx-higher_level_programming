@@ -10,4 +10,3 @@ if __name__ == "__main__":
     print("Body response:")
     print(f"\t- type: {type(status)}")
     print(f"\t- content: {status}")
-
