@@ -23,6 +23,6 @@ if __name__ == "__main__":
         else:
             r_id = response.json().get('id')
             r_name = response.json().get('name')
-            print(f"[{r_id}] [{r_name}]")
+            print(f"[{r_id}] {r_name}")
     except Exception:
         print('Not a valid JSON')
