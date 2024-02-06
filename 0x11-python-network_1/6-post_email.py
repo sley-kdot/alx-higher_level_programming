@@ -1,4 +1,4 @@
-#!/usr/bin/pyhton3
+#!/usr/bin/python3
 """"
 Module contains a script that takes in a URL and an email address
 Sends a POST request to the passed URL with the email as a parameter
